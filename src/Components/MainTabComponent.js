@@ -1,8 +1,9 @@
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Input, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Input, Col, Row } from 'reactstrap';
 import classnames from 'classnames';
 import SubTabComponent from './SubTabComponent.js';
 import ComponentsStyle from './ComponentsStyle.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -21,10 +22,12 @@ export default class Example extends React.Component {
       });
     }
   }
+
   render() {
     return (
       <div>
-        <Nav tabs>
+
+        <Nav tabs id="MainTabStyle">
           <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === '1' })}
@@ -33,6 +36,7 @@ export default class Example extends React.Component {
               Informações Pessoais
             </NavLink>
           </NavItem>
+
           <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === '2' })}
@@ -42,16 +46,22 @@ export default class Example extends React.Component {
             </NavLink>
           </NavItem>
         </Nav>
+
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
           </TabPane>
           <TabPane tabId="2">
-            <SubTabComponent/>
-             <Col sm={3}>
-            <Input name="localizar" id="inputStyle" placeholder="Localizar..." />
-            </Col>
+            <Row>
+              <Col>
+                <SubTabComponent/>
+              </Col>
+              <Col>
+                <Input name="localizar" id= "inputStyle" placeholder="Localizar..." />
+              </Col>
+            </Row>
           </TabPane>
         </TabContent>
+
       </div>
     );
   }

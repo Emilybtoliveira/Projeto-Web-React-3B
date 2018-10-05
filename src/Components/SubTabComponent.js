@@ -10,62 +10,70 @@ export default class Example extends React.Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.estaSelecionado = this.estaSelecionado.bind(this);
     this.state = {
       activeTab: '1'
     };
   }
+
+  estaSelecionado(id){
+    if(this.state.activeTab == id){
+      return "Selecionado"
+    }
+  }
+
   toggle(tab) {
     if (this.state.activeTab !== tab) {
      this.setState({
        activeTab: tab
      });
     }
-
  }
+
  render() {
     return (
       <div className="SubTabsStyle">
         <Nav tabs>
           <NavItem>
-            <NavLink
+            <NavLink id ="1"
               id = "border"
-              className={classnames({ active: this.state.activeTab === '1' })}
+              className={this.estaSelecionado("1")}
               onClick={() => { this.toggle('1'); }}
             >
               CNPq
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink
+            <NavLink id="2"
               id = "border"
-              className={classnames({ active: this.state.activeTab === '2' })}
+              className={classnames(this.estaSelecionado("2"))}
               onClick={() => { this.toggle('2'); }}
             >
               Pós-Graduação
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink
+            <NavLink id="3"
               id = "border"
-              className={classnames({ active: this.state.activeTab === '3' })}
+              className={this.estaSelecionado("3")}
               onClick={() => { this.toggle('3'); }}
             >
               Periódicos
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink
+            <NavLink id="4"
               id = "border"
-              className={classnames({ active: this.state.activeTab === '4' })}
+              className={this.estaSelecionado("4")}
               onClick={() => { this.toggle('4'); }}
             >
               Extensão
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink
+            <NavLink id="5"
               id = "border"
-              className={classnames({ active: this.state.activeTab === '5' })}
+              className={this.estaSelecionado("5")}
               onClick={() => { this.toggle('5'); }}
             >
               Demandas

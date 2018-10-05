@@ -7,6 +7,11 @@
   margin-left: -12px;
 }
 
+.Selecionado{
+  background-color: #2690FA;
+  font-weight: bold;
+}
+
 #border {
   border: 0.5px solid silver;
   border-radius: 5px;
@@ -15,4 +20,10 @@
 }
 
 #inputStyle{
+  height: 30px;
+}
+
+#MainTabStyle{
+  display: flex;
+  background-color: #F2F1F1;
 }
