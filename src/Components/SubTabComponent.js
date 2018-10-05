@@ -1,10 +1,11 @@
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, Conteiner } from 'reactstrap';
 import classnames from 'classnames';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import InfoFixa from './InfoFixa.js';
 import ComponentsStyle from './ComponentsStyle.css';
 
-export default class Example extends React.Component {
+export default class SubTabComponent extends React.Component {
 
   constructor(props) {
     super(props);
@@ -80,6 +81,28 @@ export default class Example extends React.Component {
             </NavLink>
           </NavItem>
         </Nav>
+
+        <TabContent activeTab={this.state.activeTab}>
+          <TabPane tabId="1">
+              <Row>
+                <Col>
+                  <InfoFixa/>
+                </Col>
+              </Row>
+          </TabPane>
+          <TabPane tabId="2">
+
+          </TabPane>
+          <TabPane tabId="3">
+
+          </TabPane>
+          <TabPane tabId="4">
+
+          </TabPane>
+          <TabPane tabId="5">
+
+          </TabPane>
+        </TabContent>
       </div>
     )
   }

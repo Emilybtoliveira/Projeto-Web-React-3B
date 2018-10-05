@@ -1,11 +1,13 @@
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Input, Col, Row } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Col, Row } from 'reactstrap';
 import classnames from 'classnames';
 import SubTabComponent from './SubTabComponent.js';
 import ComponentsStyle from './ComponentsStyle.css';
+import InfoFixa from './InfoFixa.js';
+import SearchBar from './SearchBar.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default class Example extends React.Component {
+export default class MainTabComponent extends React.Component {
   constructor(props) {
     super(props);
 
@@ -51,13 +53,9 @@ export default class Example extends React.Component {
           <TabPane tabId="1">
           </TabPane>
           <TabPane tabId="2">
-            <Row>
-              <Col>
-                <SubTabComponent/>
-              </Col>
-              <Col>
-                <Input name="localizar" id= "inputStyle" placeholder="Localizar..." />
-              </Col>
+            <Row justify="center">
+              <Col md={4}> <SubTabComponent/> </Col>
+              <Col md={7}> <SearchBar/> </Col>
             </Row>
           </TabPane>
         </TabContent>

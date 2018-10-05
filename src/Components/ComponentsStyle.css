@@ -1,10 +1,6 @@
 .SubTabsStyle{
   font-size: 13px;
-  padding-left: 20px;
   display: flex;
-  margin: 5px;
-  margin-top: 10px;
-  margin-left: -12px;
 }
 
 .Selecionado{
@@ -14,7 +10,7 @@
 
 #border {
   border: 0.5px solid silver;
-  border-radius: 5px;
+  border-radius: 2px;
   width: auto;
   height: 30px;
 }
