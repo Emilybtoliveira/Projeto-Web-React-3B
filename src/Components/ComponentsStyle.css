@@ -17,9 +17,20 @@
 
 #inputStyle{
   height: 30px;
+  width: 1000px;
 }
 
 #MainTabStyle{
   display: flex;
   background-color: #F2F1F1;
+}
+
+#subTabSearchBar{
+  position: absolute;
+  margin: 11px;
+}
+
+#infoFixaStyle{
+  position: absolute;
+  margin-top: 3%;
 }

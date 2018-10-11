@@ -33,7 +33,7 @@ export default class SubTabComponent extends React.Component {
 
  render() {
     return (
-      <div className="SubTabsStyle">
+      <div className="SubTabsStyle" id="subTabSearchBar">
         <Nav tabs>
           <NavItem>
             <NavLink id ="1"
@@ -84,11 +84,7 @@ export default class SubTabComponent extends React.Component {
 
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-              <Row>
-                <Col>
-                  <InfoFixa/>
-                </Col>
-              </Row>
+
           </TabPane>
           <TabPane tabId="2">
 

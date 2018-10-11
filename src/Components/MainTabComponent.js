@@ -53,10 +53,13 @@ export default class MainTabComponent extends React.Component {
           <TabPane tabId="1">
           </TabPane>
           <TabPane tabId="2">
-            <Row justify="center">
+            <Row justify="center" >
               <Col md={4}> <SubTabComponent/> </Col>
               <Col md={7}> <SearchBar/> </Col>
             </Row>
+            <Col>
+              <InfoFixa/>
+            </Col>
           </TabPane>
         </TabContent>
 
